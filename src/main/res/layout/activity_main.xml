@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee9e9"
+    tools:context=".MainActivity">
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:addStatesFromChildren="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="344dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="30dp"
+        android:background="#eee9e9	"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search">
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="37dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progress_bg"
+            android:saveEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.225"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtinformed"
+            app:layout_constraintVertical_bias="0.483" />
+
+        <TextView
+            android:id="@+id/txtinformed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Be informed about your journey!"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRelative"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtRelative"
+            app:layout_constraintTop_toBottomOf="@+id/txtRelative" />
+
+        <TextView
+            android:id="@+id/txtRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="421dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <HorizontalScrollView
+            android:layout_width="468dp"
+            android:layout_height="490dp"
+            android:padding="10px">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/moreabouthypertenstion"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Learn More About Hypertension"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/Article2"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="50dp"
+                            android:clickable="true"
+                            android:onClick="Article2">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/howbloodpressureworks2"
+                                android:layout_width="64dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/pulseandbloodpressureprocedures"></androidx.appcompat.widget.AppCompatImageView>
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@+id/howbloodpressureworks2"
+                                android:layout_toRightOf="@+id/howbloodpressureworks2"
+                                android:text="Pulse And Blood Pressure Procedures"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/moreaboutbloodpressure"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Learn More About Blood Pressure"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/Article3"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="50dp"
+                            android:clickable="true"
+                            android:onClick="Article3">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/howbloodpressureworks3"
+                                android:layout_width="64dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/understandbloodpressurereadings"></androidx.appcompat.widget.AppCompatImageView>
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toEndOf="@+id/howbloodpressureworks3"
+                                android:layout_toRightOf="@+id/howbloodpressureworks3"
+                                android:text="Understanding Blood Pressure"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/moreaboutfoodchoices"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Learn More About Food Choices"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/Article4"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="50dp"
+                            android:clickable="true"
+                            android:onClick="Article4">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/howbloodpressureworks4"
+                                android:layout_width="64dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/healthydiet"></androidx.appcompat.widget.AppCompatImageView>
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toEndOf="@+id/howbloodpressureworks4"
+                                android:layout_toRightOf="@+id/howbloodpressureworks4"
+                                android:text="Blood Pressure and a Healthy Diet"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Seeallhypertension"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="See all"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/Article5"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="50dp"
+                            android:clickable="true"
+                            android:onClick="Article5">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/howbloodpressureworks5"
+                                android:layout_width="64dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/bloodpressureworks"></androidx.appcompat.widget.AppCompatImageView>
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@+id/howbloodpressureworks5"
+                                android:layout_toRightOf="@+id/howbloodpressureworks5"
+                                android:text="HOW BLOOD PRESSURE WORKS"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/Seeallbloodpressure"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="See all"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/Article6"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="50dp"
+                            android:clickable="true"
+                            android:onClick="Article6">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/howbloodpressureworks6"
+                                android:layout_width="64dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/monitoring"></androidx.appcompat.widget.AppCompatImageView>
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toEndOf="@+id/howbloodpressureworks6"
+                                android:layout_toRightOf="@+id/howbloodpressureworks6"
+                                android:text="Monitoring Blood Pressure"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/Seeallfoodchoices"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="See all"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/Article7"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="50dp"
+                            android:clickable="true"
+                            android:onClick="Article7">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/howbloodpressureworks7"
+                                android:layout_width="64dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/eatingright"></androidx.appcompat.widget.AppCompatImageView>
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toEndOf="@+id/howbloodpressureworks7"
+                                android:layout_toRightOf="@+id/howbloodpressureworks7"
+                                android:text="Blood Pressure: Eating Right"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
